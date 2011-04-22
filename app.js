@@ -15,7 +15,6 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
@@ -37,6 +36,6 @@ app.get('/', function(req, res){
 // Only listen on $ node app.js
 
 if (!module.parent) {
-  app.listen(3000);
+  app.listen(80);
   console.log("Express server listening on port %d", app.address().port);
 }
