@@ -53,11 +53,11 @@ app.get('/', function(req,res) {
 
 	
 app.get('/:id', function(req, res) {
-	var out = projects[req.params.id];
+	var out = getDescription(projects[req.params.id]);
 	res.render('index', {locals: 
-	{
+		{
 		output: out,
-			title: "GoalPep!"
+		title: "GoalPep!"
 		}
 	})
 });
