@@ -10,9 +10,9 @@ var projects = [{
 	mt:1000
 	},{
 	name:"Learn javascript",
-	date: new Date("05/05/1987"),
-	mr: 60,
-	mt: 34
+	date: new Date('05/05/1987'),
+	mr:60,
+	mt:34
 	}
 	]
 
