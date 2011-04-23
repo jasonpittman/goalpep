@@ -9,5 +9,5 @@ var projects = [{
 	mr:100,
 	mt:1000}]
 
-module.exports.all = projects;
+module.exports = projects;
 

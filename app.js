@@ -34,10 +34,33 @@ app.configure('production', function(){
 
 var projects = require('./goalpep.js');
 
-app.get('/', function(req, res){
-  res.render('index', {
-	locals: {projects: projects.all, title: "GoalPep!"}
-	})});
+function getDescription(input) {
+	return "<p>" + input.name + "<br>" + input.date + "<br>";
+}
+
+app.get('/', function(req,res) {
+	var i; 
+		var out="";
+		for (i = 0; i < projects.length; i += 1) {
+			out += getDescription(projects[i]);
+		};
+	
+	res.render('index', {locals:
+	{
+		output: out,
+		title: "GoalPep!"
+	}})});
+
+	
+app.get('/:id', function(req, res) {
+	var out = projects[req.params.id];
+	res.render('index', {locals: 
+	{
+		output: out,
+			title: "GoalPep!"
+		}
+	})
+});
 
 
 // Only listen on $ node app.js
