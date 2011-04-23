@@ -50,6 +50,15 @@ app.get('/', function(req,res) {
 		output: out,
 		title: "GoalPep!"
 	}})});
+	
+app.get('/projects', function(req,res) {
+	res.send(projects);})
+
+app.get('/projects/:id', function (req, res) {
+	res.send(projects[req.params.id]);
+})
+
+
 
 	
 app.get('/:id', function(req, res) {
