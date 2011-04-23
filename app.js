@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -32,14 +31,18 @@ app.configure('production', function(){
 
 // Routes
 
+
+var projects = require('./goalpep.js');
+
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Goalpep.'
-  });
-});
+	locals: {projects: projects.all, title: "GoalPep!"}
+	})});
+
 
 // Only listen on $ node app.js
 
 if (!module.parent) {
   app.listen(80);
 }
+
