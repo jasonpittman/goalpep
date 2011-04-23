@@ -12,10 +12,14 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.use(express.logger());
+  app.use(express.errorHandler({
+  	dumpExceptions:true, showStack:true
+  }));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(    __dirname + '/public'));
+  app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
@@ -30,7 +34,7 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Goalpep up in here'
+    title: 'Goalpep.'
   });
 });
 
@@ -38,5 +42,4 @@ app.get('/', function(req, res){
 
 if (!module.parent) {
   app.listen(80);
-  console.log("Express server listening on port %d", app.address().port);
 }
