@@ -1,0 +1,36 @@
+div#navbar {
+	background: #BBB;
+	height: 75px;
+	text-align: center;
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted;
+	border-color: solid #000;
+}
+
+div#tree {
+	background: #DDD; 
+	height: 600px;
+	font-size: 20px;
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted;
+	border-color: solid #000;
+}
+
+div#panel {
+	background: #CCC; 
+	height: 600px;
+	font-size: 20px;
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted;
+	border-color: solid #000;
+}
+
+div#footer {
+	background: #BBB;
+	height: 20px;
+	text-align: center;
+	font-size: 14px;
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted;
+	border-color: solid #000;
+}
