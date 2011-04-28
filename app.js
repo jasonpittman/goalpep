@@ -58,7 +58,10 @@ app.get('/projects/:id', function (req, res) {
 	res.send(projects[req.params.id]);
 })
 
-
+app.get('/prototype', function(req, res) {
+	res.sendFile('prototype_tree.html');
+	
+})
 
 	
 app.get('/:id', function(req, res) {
