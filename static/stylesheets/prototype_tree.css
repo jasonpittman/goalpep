@@ -1,5 +1,5 @@
 div#navbar {
-	background: #0C4569;
+	background-color: #0C4569;
 	color: #EEE;
 	height: 75px;
 	text-align: center;
@@ -9,7 +9,7 @@ div#navbar {
 }
 
 div#tree {
-	background: #FFF; 
+	background-color: #FFF; 
 	height: 600px;
 	font-size: 20px;
 	margin-right: 0;
@@ -19,7 +19,7 @@ div#tree {
 }
 
 div#panel {
-	background: #FFF; 
+	background-color: #FFF; 
 	height: 600px;
 	font-size: 20px;
 	text-align: center;
@@ -30,7 +30,7 @@ div#panel {
 }
 
 div#panel.selected{
-	background: #DDD; 
+	background-color: #DDD; 
 	height: 600px;
 	font-size: 20px;
 	text-align: center;
@@ -41,7 +41,7 @@ div#panel.selected{
 }
 
 div#footer {
-	background: #0C4569;
+	background-color: #0C4569;
 	color: #EEE;
 	height: 20px;
 	text-align: center;
@@ -51,51 +51,35 @@ div#footer {
 	border-color: solid #000;
 }
 
-/* simpleTreeMenu */
-
-ul.simpleTreeMenu {
-	line-height: 1.75em;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	background: #EEE;
+#goalPepTree {
+	width:450px;
+	margin-top: 10px;
+	background-color:#F4F4EE;
 }
 
-ul.simpleTreeMenu, ul.simpleTreeMenu ul {
-	margin-left: 0px;
-	padding-left: 15px;
+#goalPepTree, #goalPepTree ul {
+	list-style-type: none;
+	margin-left:10px;
+	margin-bottom:5px;
+	padding:0;
+	font-size: 18px;
 }
 
-ul.simpleTreeMenu li.Node {
-	list-style-image: url("../images/menu-arrow-right.png");
-	margin-left: 5px;
-	padding: 0px;
-}
-
-ul.simpleTreeMenu li.Node span {
-	cursor: pointer;
-	display: block;
-}
-
-ul.simpleTreeMenu li.Node span:hover {
-	background-color: #e0e0e0;
-}
-
-ul.simpleTreeMenu li.expanded {
-	list-style-image: url("../images/menu-arrow-down.png");
-}
-
-ul.simpleTreeMenu li.Leaf {
-	list-style-image: url("../images/menu-dot.png");
-	margin-left: 5px;
-	padding: 0px;	
-}
-
-ul.simpleTreeMenu a, ul.simpleTreeMenu a:visited {
-	display: block;
+#goalPepTree a {
 	text-decoration: none;
-	color: #3333AA;
+	color: #000;
 }
 
-ul.simpleTreeMenu a:hover {
-	background-color: #e0e0e0;
+.handle { 
+	background: transparent url( ../images/tree-handle.png ) no-repeat left top; 
+	display:block; 
+	float:left;
+	width:10px; 
+	height:10px;
+	cursor:pointer;
 }
+
+.closed { background-position: left top; }
+.opened { background-position: left -10px; }
+
+.highlight { background-color: #CCC; }
