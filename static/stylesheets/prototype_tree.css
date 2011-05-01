@@ -1,5 +1,6 @@
 div#navbar {
-	background: #BBB;
+	background: #0C4569;
+	color: #EEE;
 	height: 75px;
 	text-align: center;
 	border-width: 1px 1px 1px 1px;
@@ -8,29 +9,82 @@ div#navbar {
 }
 
 div#tree {
-	background: #DDD; 
+	background: #FFF; 
 	height: 600px;
 	font-size: 20px;
-	border-width: 1px 1px 1px 1px;
+	margin-right: 0;
+	border-width: 0px 0px 0px 0px;
 	border-style: dotted;
 	border-color: solid #000;
 }
 
 div#panel {
-	background: #CCC; 
+	background: #FFF; 
 	height: 600px;
 	font-size: 20px;
+	text-align: center;
+	margin-left: 0;
 	border-width: 1px 1px 1px 1px;
 	border-style: dotted;
 	border-color: solid #000;
 }
 
 div#footer {
-	background: #BBB;
+	background: #0C4569;
+	color: #EEE;
 	height: 20px;
 	text-align: center;
 	font-size: 14px;
 	border-width: 1px 1px 1px 1px;
 	border-style: dotted;
 	border-color: solid #000;
+}
+
+/* simpleTreeMenu */
+
+ul.simpleTreeMenu {
+	line-height: 1.75em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background: #EEE;
+}
+
+ul.simpleTreeMenu, ul.simpleTreeMenu ul {
+	margin-left: 0px;
+	padding-left: 15px;
+}
+
+ul.simpleTreeMenu li.Node {
+	list-style-image: url("../images/menu-arrow-right.png");
+	margin-left: 5px;
+	padding: 0px;
+}
+
+ul.simpleTreeMenu li.Node span {
+	cursor: pointer;
+	display: block;
+}
+
+ul.simpleTreeMenu li.Node span:hover {
+	background-color: #e0e0e0;
+}
+
+ul.simpleTreeMenu li.expanded {
+	list-style-image: url("../images/menu-arrow-down.png");
+}
+
+ul.simpleTreeMenu li.Leaf {
+	list-style-image: url("../images/menu-dot.png");
+	margin-left: 5px;
+	padding: 0px;	
+}
+
+ul.simpleTreeMenu a, ul.simpleTreeMenu a:visited {
+	display: block;
+	text-decoration: none;
+	color: #3333AA;
+}
+
+ul.simpleTreeMenu a:hover {
+	background-color: #e0e0e0;
 }
