@@ -29,6 +29,17 @@ div#panel {
 	border-color: solid #000;
 }
 
+div#panel.selected{
+	background: #DDD; 
+	height: 600px;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 0;
+	border-width: 1px 1px 1px 1px;
+	border-style: dotted;
+	border-color: solid #000;
+}
+
 div#footer {
 	background: #0C4569;
 	color: #EEE;

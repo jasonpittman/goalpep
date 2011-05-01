@@ -29,9 +29,13 @@
 					if ($t.hasClass("expanded")) {
 						$t.removeClass("expanded");
 						$t.children("ul").hide();
+						$('#panel').removeClass("selected");
+						$('#panel').html('')
 					} else {
 						$t.addClass("expanded");
 						$t.children("ul").show();
+						$('#panel').addClass("selected");
+						$('#panel').html('Info Goes Here')
 					}
 					event.stopPropagation();
 				});    
