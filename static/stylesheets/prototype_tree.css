@@ -1,11 +1,21 @@
 #navbar {
-	background-color: #0C4569;
-	color: #EEE;
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.56, #D5DCF2),
+	    color-stop(0.38, #B7C5F0)
+	);
+	background-image: -moz-linear-gradient(
+	    left top,
+	    #D5DCF2 56%,
+	    #B7C5F0 38%
+	);
+
+	color: #000;
 	height: 75px;
 	text-align: center;
-	border-width: 1px 1px 1px 1px;
-	border-style: dotted;
-	border-color: solid #000;
+	border: 1px solid black;
 }
 
 #tree {
@@ -25,30 +35,40 @@
 	margin-bottom: 20px;
 }
 
-#panel-content {
+#panel_content {
 	width:450px;
 	padding: 0;
 	font-size: 18px;
 	list-style-type: none;
 }
 
-#panel-content a {
+#panel_content a {
 	width: 100%;
 	text-decoration: none;
 	list-style-type: none;
 	color: #000;
-	border: 1px solid #000;
+	border: 1px solid black;
 }
 
 #footer {
-	background-color: #0C4569;
-	color: #EEE;
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.56, #D5DCF2),
+	    color-stop(0.38, #B7C5F0)
+	);
+	background-image: -moz-linear-gradient(
+	    left top,
+	    #D5DCF2 56%,
+	    #B7C5F0 38%
+	);
+
+	color: #000;
 	height: 20px;
 	text-align: center;
 	font-size: 14px;
-	border-width: 1px 1px 1px 1px;
-	border-style: dotted;
-	border-color: solid #000;
+	border: 1px solid black;
 }
 
 #goalPepTree {
