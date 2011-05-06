@@ -1,6 +1,6 @@
 $(function () {
  	$('#goalPepTree a').addClass('nohighlight').append("&#160;").prepend("&#160;");
- 	$('#panel-content a').addClass('nohighlight').append("&#160;").prepend("&#160;");
+ 	$('#panel_content a').addClass('nohighlight').append("&#160;").prepend("&#160;");
 	
 	$('#goalPepTree ul')
 		.hide()
@@ -21,8 +21,8 @@ $(function () {
 		//event.preventDefault();
 		var name = $(this).html();
 
-		$('#panel-content a').html(name);
-		$('#panel-content a').removeClass('highlight').addClass('nohighlight');
+		$('#panel_content a').html(name);
+		$('#panel_content a').removeClass('highlight').addClass('nohighlight');
 		
 		return false;
 	});

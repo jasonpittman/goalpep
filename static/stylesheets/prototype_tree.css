@@ -75,8 +75,35 @@
 	border: 1px solid #000;
 }
 
-.highlight { background-color: #CCC; }
-.nohighlight { background-color: #EEE; }
+.highlight { 
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.56, #D5DCF2),
+	    color-stop(0.38, #B7C5F0)
+	);
+	background-image: -moz-linear-gradient(
+	    left top,
+	    #D5DCF2 56%,
+	    #B7C5F0 38%
+	);
+}
+
+.nohighlight { 
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    right bottom,
+	    color-stop(0.56, #D5DCF2),
+	    color-stop(0.67, #B7C5F0)
+	);
+	background-image: -moz-linear-gradient(
+	    left top,
+	    #D5DCF2 56%,
+	    #B7C5F0 67%
+	);
+}
 
 .handle { 
 	background: transparent url( ../images/tree-handle.png ) no-repeat left top; 
@@ -94,3 +121,5 @@
 .color1 { background-color: #FFBABA; }
 .color2 { background-color: #BAFFBA; }
 .color3 { background-color: #BABAFF; }
+
+
