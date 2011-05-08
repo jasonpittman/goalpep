@@ -1,6 +1,6 @@
 $(function () {
- 	$('#goalPepTree a').addClass('nohighlight').append("&#160;").prepend("&#160;");
- 	$('#panel_content a').addClass('nohighlight').append("&#160;").prepend("&#160;");
+ 	$('#goalPepTree a').toggleClass('nohighlight').append("&#160;").prepend("&#160;");
+ 	$('#panel_content a').toggleClass('nohighlight').append("&#160;").prepend("&#160;");
 	
 	$('#goalPepTree ul')
 		.hide()
@@ -16,29 +16,25 @@ $(function () {
 		    .toggle();
 	})
 		
-	$('#goalPepTree a').click(function(event) {
-		//event.stopPropagation();
-		//event.preventDefault();
+	$('#goalPepTree a').click(function(e) {
 		var name = $(this).html();
-
 		$('#panel_content a').html(name);
-		$('#panel_content a').removeClass('highlight').addClass('nohighlight');
-		
+
+		$('#goalPepTree a').removeClass('select');
+		$(this).addClass('select');		
 		return false;
 	});
 
 	$('#goalPepTree a').hover(
 	  function () {
-	    $(this).removeClass('nohighlight').addClass('highlight');
+	    $(this).toggleClass('nohighlight highlight');
 	  }, 
 	  function () {
-	    $(this).removeClass('highlight').addClass('nohighlight');
+	    $(this).toggleClass('nohighlight highlight');
 	  }
 	);
 	
-	$('#panel-content a').click(function(event) {
-		//event.stopPropagation();
-		//event.preventDefault();
+	$('#panel-content a').click(function(e) {
 		return false;
 	});
 
