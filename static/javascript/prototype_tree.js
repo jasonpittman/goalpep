@@ -7,6 +7,10 @@ $(function () {
 	$('.clickable').click(function(){
 		window.location=$(this).find('a').attr('href');
 		//var scorecard = $(this).clone();
+		
+		var html = $(this).find('td').first().html();
+		$('#panel').html(html);
+		
 		return false;
 	});
 

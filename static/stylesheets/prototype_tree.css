@@ -17,6 +17,14 @@ html, body {
 	border: 1px dashed black;
 }
 
+#panel {
+	background-color: #FAFFFA; 
+	font-size: 18px;
+	height: 450px;
+	text-align: center;
+	margin: 0px;
+}
+
 #footer {
 	background-color: #FAFFFA;
 	color: #000;
