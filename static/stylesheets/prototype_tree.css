@@ -25,13 +25,12 @@ html, body {
 	font-size: 14px;
 }
 
+
 #node_graph {
-	font-size: 1em;
-	margin: 0px;
-	padding: 0px;
 	text-align: center;
 	vertical-align: middle;
 }
+
 
 tr, td {
 	width: 33.333%;	
@@ -87,21 +86,6 @@ tr, td {
 .select { 
 	background-color: #EEE; 
 }
-
-/* .handle { 
-	background: transparent url( ../images/tree-handle.png ) no-repeat left top; 
-	display: block; 	
-	float: left;
-	width: 10px; 
-	height: 10px;
-	margin-top: 9px;
-	margin-left: -10px;
-	cursor: pointer;
-}
-*/
-
-.closed { background-position: left top; }
-.opened { background-position: left -10px; }
 
 a:link {color: #000000; text-decoration: none; }
 a:active {color: #000000; text-decoration: none; }
