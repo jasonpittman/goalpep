@@ -1,16 +1,12 @@
 $(function () {
 	
-	$('table td:odd').each(function () {
-		$(this).addClass('striped');
-	});
+//	$('table td:odd').each(function () {
+//		$(this).addClass('striped');
+//	});
 
 	$('.clickable').click(function(){
 		window.location=$(this).find('a').attr('href');
 		//var scorecard = $(this).clone();
-		
-		var html = $(this).find('td').first().html();
-		$('#panel').html(html);
-		
 		return false;
 	});
 
