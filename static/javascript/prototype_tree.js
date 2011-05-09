@@ -9,7 +9,7 @@ $(function () {
 		//var scorecard = $(this).clone();
 		return false;
 	});
-
+	
 /* 	$('#goalPepTree a').addClass('nohighlight').append("&#160;").prepend("&#160;");
  	$('#panel_content a').addClass('nohighlight').append("&#160;").prepend("&#160;");
 
