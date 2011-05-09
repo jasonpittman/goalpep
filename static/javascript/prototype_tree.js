@@ -1,7 +1,22 @@
 $(function () {
- 	$('#goalPepTree a').toggleClass('nohighlight').append("&#160;").prepend("&#160;");
- 	$('#panel_content a').toggleClass('nohighlight').append("&#160;").prepend("&#160;");
 	
+//	$('table td:odd').each(function () {
+//		$(this).addClass('striped');
+//	});
+
+	$('.clickable').click(function(){
+		window.location=$(this).find('a').attr('href');
+		//var scorecard = $(this).clone();
+		
+		var html = $(this).find('td').first().html();
+		$('#panel').html(html);
+		
+		return false;
+	});
+
+/* 	$('#goalPepTree a').addClass('nohighlight').append("&#160;").prepend("&#160;");
+ 	$('#panel_content a').addClass('nohighlight').append("&#160;").prepend("&#160;");
+
 	$('#goalPepTree ul')
 		.hide()
 		.prev('span')
@@ -27,15 +42,16 @@ $(function () {
 
 	$('#goalPepTree a').hover(
 	  function () {
-	    $(this).toggleClass('nohighlight highlight');
+	    $(this).toggleClass('highlight');
 	  }, 
 	  function () {
-	    $(this).toggleClass('nohighlight highlight');
+	    $(this).toggleClass('highlight');
 	  }
 	);
 	
 	$('#panel-content a').click(function(e) {
 		return false;
 	});
+*/
 
 });

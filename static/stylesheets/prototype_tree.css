@@ -1,120 +1,102 @@
-#navbar {
-	background-image: -webkit-gradient(
-	    linear,
-	    left top,
-	    right bottom,
-	    color-stop(0.56, #D5DCF2),
-	    color-stop(0.38, #B7C5F0)
-	);
-	background-image: -moz-linear-gradient(
-	    left top,
-	    #D5DCF2 56%,
-	    #B7C5F0 38%
-	);
-
-	color: #000;
-	height: 75px;
-	text-align: center;
-	border: 1px solid black;
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0px; 
+	margin: 0px;
 }
 
-#tree {
-	background-color: #FFF; 
-	height: 600px;
-	font-size: 20px;
-	margin-right: 0;
+#navbar {
+	height: 60px;
+	line-height: 60px;
+	background-color: #FAFFFA;
+	color: #000;
+	font-size: 25px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	border: 1px dashed black;
 }
 
 #panel {
-	background-color: #DDD; 
-	width:450px;
+	background-color: #FAFFFA; 
+	font-size: 18px;
 	height: 450px;
-	font-size: 18px;
 	text-align: center;
-	margin-top: 20px;
-	margin-left: 0px;
-	margin-bottom: 20px;
-}
-
-#panel_content {
-	padding: 0;
-	font-size: 18px;
-	list-style-type: none;
-	background-color: #EEE;
-	border: 1px solid black;
-}
-
-#panel_content a {
-	text-decoration: none;
-	list-style-type: none;
-	color: #000;
-	background-color: #EEE;
+	margin: 0px;
 }
 
 #footer {
-	background-image: -webkit-gradient(
-	    linear,
-	    left top,
-	    right bottom,
-	    color-stop(0.56, #D5DCF2),
-	    color-stop(0.38, #B7C5F0)
-	);
-	background-image: -moz-linear-gradient(
-	    left top,
-	    #D5DCF2 56%,
-	    #B7C5F0 38%
-	);
-
+	background-color: #FAFFFA;
 	color: #000;
 	height: 20px;
 	text-align: center;
 	font-size: 14px;
-	border: 1px solid black;
 }
 
-#goalPepTree {
-	width:450px;
-	margin-top: 20px;
-	margin-left: 0px;
-	margin-bottom: 20px;
-	padding: 0;
-	font-size: 18px;
-	list-style-type: none;
-}
-
-#goalPepTree ul {
-	list-style-type: none;
-	padding: 0px;
+#node_graph {
+	font-size: 1em;
 	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	vertical-align: middle;
 }
 
-#goalPepTree li {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 15px;
+tr, td {
+	width: 33.333%;	
 }
 
-#goalPepTree a {
-	text-decoration: none;
-	list-style-type: none;
-	color: #000;
-	border: 1px solid #000;
+.node {
+	height: 72px;
 }
 
-.highlight { 
-	background-color: #D5DCF2;
+.color1a {
+	background-color: #BCB;
+}
+
+.color1b {
+	background-color: #BCB;
+}
+
+.striped {
+
+}
+
+.score {
+	height: 72px;
+	background-color: #DED;
+	font: 28px bold;
+	line-height: 72px;
+}
+
+.color2a {
+	background-color: #B9DAF0;
+}
+
+.color2b {
+	background-color: #CADFED;
+}
+
+.color3a {
+	background-color: #EDE4CA;
+}
+
+.color3b {
+	background-color: #F5EDD7;
 }
 
 .nohighlight { 
 	background-color: #B7C5F0;
 }
 
+.highlight { 
+	background-color: #D5DCF2;
+}
+
 .select { 
 	background-color: #EEE; 
 }
 
-.handle { 
+/* .handle { 
 	background: transparent url( ../images/tree-handle.png ) no-repeat left top; 
 	display: block; 	
 	float: left;
@@ -124,10 +106,22 @@
 	margin-left: -10px;
 	cursor: pointer;
 }
+*/
 
 .closed { background-position: left top; }
 .opened { background-position: left -10px; }
 
+a:link {color: #000000; text-decoration: none; }
+a:active {color: #000000; text-decoration: none; }
+a:visited {color: #000000; text-decoration: none; }
+a:hover {color: #000000; text-decoration: none; }
 
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 
 

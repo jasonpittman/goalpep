@@ -6,75 +6,130 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>GoalPep Prototype Tree</title>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="../static/javascript/prototype_tree.js" type="text/javascript"></script>
 
 	<!--	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/960/reset.css" /> -->
-	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/960/text.css" /> 
-	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/960/960.css" />	
 	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/prototype_tree.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/960/text.css" /> 
+	<link rel="stylesheet" type="text/css" media="all" href="../static/stylesheets/960/grid.css" />	
+
 </head>
 
 <body>
-	<div class="container_12">
-		<div class="grid_12">
-			<div id="navbar"><h1>GoalPep Tree Prototype</h1></div>
+	<div class="container_24">
+		<div class="grid_24" id="navbar"><font face="optima">GoalPep Tree Prototype</font></div>
+		
+		<div id="node_graph" class="grid_16 unselectable">
+			<div class="clickable grid_7"><a href="#" />
+				<table class="node grid_2 color1a">
+				<tr>
+				  <td>Health</td>
+				</tr>
+				<tr>
+				  <td>VR: 2</td>
+				</tr>
+				<tr>
+				 <td>
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+				</td>
+				</tr>
+				</table>
+
+				<table class="node grid_3 color1a">
+				<tr>
+				  <td>Milestones</td>
+				</tr>
+				<tr>
+				  <td>Completed: 15</td>
+				</tr>
+				<tr>
+				 <td>Remaining: 35</td>
+				</tr>
+				</table>
+				<table class="score grid_2 color1b"><tr><td>232</td></tr></table>
+			</div>
+			<div class="clear"></div>
+
+
+			<div class="clickable grid_7 push_1"><a href="#" />
+				<table class="node grid_2 color2a push_1">
+				<tr>
+				  <td>Diet</td>
+				</tr>
+				<tr>
+				  <td>VR: 2</td>
+				</tr>
+				<tr>
+				 <td>
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+				</td>
+				</tr>
+				</table>
+
+				<table class="node grid_3 color2a push_1">
+				<tr>
+				  <td>Milestones</td>
+				</tr>
+				<tr>
+				  <td>Completed: 25</td>
+				</tr>
+				<tr>
+				 <td>Remaining: 35</td>
+				</tr>
+				</table>
+				<table class="score grid_2 color2b push_1"><tr><td>155</td></tr></table>
+			</div>
+			<div class="clear"></div>
+			
+			
+			<div class="clickable grid_7 push_1"><a href="#" />
+				<table class="node grid_2 color3a push_1">
+				<tr>
+				  <td>Exercise</td>
+				</tr>
+				<tr>
+				  <td>VR: 2</td>
+				</tr>
+				<tr>
+				 <td>
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+					<img src="../static/images/task-x.png" />
+				</td>
+				</tr>
+				</table>
+
+				<table class="node grid_3 color3a push_1">
+				<tr>
+				  <td>Milestones</td>
+				</tr>
+				<tr>
+				  <td>Completed: 10</td>
+				</tr>
+				<tr>
+				 <td>Remaining: 35</td>
+				</tr>
+				</table>
+				<table class="score grid_2 color3b push_1"><tr><td>266</td></tr></table>
+			</div>
+			<div class="clear"></div>
+			
+									
 		</div>
 
-		<div class="grid_6">
-			<div id="content">
- 	      <ul id="goalPepTree">
-	        <li><span><a href="#">Health</a></span>
-	          <ul>
-	            <li><span><a href="#">Exercise</a></span>
-	              <ul>
-	                <li><span><a href="#">Working Out</a></span></li>
-	                <li><span><a href="#">Playing Tennis</a></span></li>
-	              </ul>
-	            </li>
-	            <li><span><a href="#">Diet</a></span>
-	              <ul>
-	                <li><a href="#">Counting Calories</a></li>
-	                <li><a href="#">Watching Carbs</a></li>
-	              </ul>
-	            </li>
-	            <li><span><a href="#">Cooking</a></span>
-	              <ul>
-	                <li><a href="#">Learning Recipes</a></li>
-	                <li><a href="#">Watching Cooking Shows</a></li>
-	              </ul>
-	            </li>
-	          </ul>
-	        </li>
-	        <li><span><a href="#">Wealth</a></span>
-	          <ul>
-	            <li><a href="#">Career</a></li>
-	            <li><a href="#">Investments</a></li>
-	          </ul>
-	        </li>
-	        <li><span><a href="#">Relationships</a></span>
-	          <ul>
-	            <li><a href="#">Marriage</a></li>
-	            <li><a href="#">Kids</a></li>
-
-	          </ul>
-	        </li>
-	      </ul>
-
-
-			</div>
-		</div>
-
-		<div class="grid_6">
-			<div id="panel">
-				<div id="panel_content">
-					<a href="#">User Panel Content</a>
-				</div>
-			</div>
+			
+		<div class="grid_8">
+			<div id="panel">User Panel Content</div>
 		</div>
 				
-		<div class="grid_12">  
+		<div class="grid_24">  
 			<div id="footer">GoalPep Industries Inc.</div>
 	    </div>
 
