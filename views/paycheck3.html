@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>My paycheck calculator</title>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+		$(function () {
+			
+			// Initialize variables
+			var startTimeHSelect = "0";
+            var startTimeMSelect = "0";
+			var endTimeHSelect = "0";
+            var endTimeMSelect = "0";
+            var startxm = "AM";
+            var endxm = "AM";
+			var totalhours = 0;
+			
+			// Initialize form values
+			$("#startTimeH").val(startTimeHSelect);
+			$("#startTimeM").val(startTimeMSelect);
+			$("#endTimeH").val(endTimeHSelect);
+			$("#endTimeM").val(endTimeMSelect);
+			$("#startxm").val(startxm);
+			$("#endxm").val(endxm);
+			
+			// Update Total Hours on button click
+			$('#update').click(function() {
+							
+			 	startTimeHSelect = $("#startTimeH").val();
+	         	startTimeMSelect = $("#startTimeM").val();
+			 	endTimeHSelect = $("#endTimeH").val();
+	            endTimeMSelect = $("#endTimeM").val();
+	            startxm = $("#startxm").val();
+	            endxm = $("#endxm").val();
+	
+				startTimeHSelect = parseInt(startTimeHSelect);
+				startTimeMSelect = parseInt(startTimeMSelect);
+				endTimeHSelect = parseInt(endTimeHSelect);
+				endTimeMSelect = parseInt(endTimeMSelect);
+
+				console.log('startTimeHSelect: ' + startTimeHSelect);
+				console.log('startTimeMSelect: ' + startTimeMSelect);
+				console.log('endTimeHSelect: ' + endTimeHSelect);
+				console.log('endTimeMSelect: ' + endTimeMSelect);
+				console.log('startxm: ' + startxm);
+				console.log('endxm: ' + endxm);
+			
+				// Calculate total hours
+				
+				startTime = startTimeHSelect;
+				startTime += startTimeMSelect / 60;
+				
+				endTime = endTimeHSelect;
+				endTime += endTimeMSelect / 60;
+				
+				// If time is PM, add 12 hours for military style time for accurate calculation
+				
+				if( startxm=="PM" ) 
+				{
+					startTime = startTime + 12;				
+				}
+
+				if( endxm=="PM" ) 
+				{
+					endTime = endTime + 12;			
+				}
+				
+				// Subtract the startTime from the endTime to get Total Hours
+				
+				totalhours = endTime - startTime;
+				
+				// Check whether result is negative. If so, display an error
+				if ( totalhours < 0 )
+				{
+					totalhours = 'ERROR';
+				}
+								
+				console.log('totalhours: ' + totalhours);	
+				
+				// Populate the Total Hours field with the result
+
+	    		$("#totalhours").html(totalhours);
+	
+			});
+
+			// Initialize Total Hours field on document load
+			$('#update').click();
+			
+        });
+
+
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr><td></td>
+                <td>Start</td>
+                <td>End</td>
+                <td>Total hours</td>
+            </tr>
+                <tr><td>Monday</td>
+                    <td>
+                        <select class="value" name="startTimeH" id="startTimeH">
+                            <option value="0">00</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="value" name="startTimeM" id="startTimeM">
+                            <option value="0">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                        <select class="value" name="startxm" id="startxm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="value" name="endTimeH" id="endTimeH">
+                            <option value="0">00</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="value" name="endTimeM" id="endTimeM">
+                            <option value="0">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                        <select class="value" name="endxm" id="endxm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div id="totalhours"></div>
+                    </td>
+                </tr>
+                    <tr><td><input id="update" type="button" value="Update"></td>
+                    </tr>
+        </table>
+    </body>
+</html>
